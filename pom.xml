@@ -7,6 +7,7 @@
     <artifactId>gs-spring-boot</artifactId>
     <version>0.1.0</version>
     <packaging>war</packaging>
+    <name>hello</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -86,6 +87,14 @@
                             </includes>
                         </resource>
                     </resources>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.0.0</version>
+                <configuration>
+                    <attachClasses>true</attachClasses>
                 </configuration>
             </plugin>
         </plugins>
