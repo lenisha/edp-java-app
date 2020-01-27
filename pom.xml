@@ -14,15 +14,20 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
     </parent>
-
+    <repositories>
+        <repository>
+            <id>maven-public</id>
+            <url>http://${env.NEXUS_IP}:8081/repository/maven-public/</url>
+        </repository>
+    </repositories>
     <distributionManagement>
         <repository>
-            <id>nexus</id>
+            <id>nexus-releases</id>
             <name>maven-releases</name>
             <url>http://${env.NEXUS_IP}:8081/repository/${env.NEXUS_REPO_PREFIX}-releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus</id>
+            <id>nexus-snapshots</id>
             <name>maven-snapshots</name>
             <url>http://${env.NEXUS_IP}:8081/repository/${env.NEXUS_REPO_PREFIX}-snapshots/</url>
         </snapshotRepository>
