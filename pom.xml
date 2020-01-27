@@ -16,7 +16,7 @@
     </parent>
     <repositories>
         <repository>
-            <id>maven-public</id>
+            <id>central</id>
             <url>http://52.228.32.176:8081/repository/maven-public/</url>
         </repository>
     </repositories>
