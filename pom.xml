@@ -24,12 +24,12 @@
         <repository>
             <id>nexus-releases</id>
             <name>maven-releases</name>
-            <url>http://${env.NEXUS_IP}:8081/repository/${env.NEXUS_REPO_PREFIX}-releases/</url>
+            <url>http://52.228.32.176:8081/repository/${env.NEXUS_REPO_PREFIX}-releases/</url>
         </repository>
         <snapshotRepository>
             <id>nexus-snapshots</id>
             <name>maven-snapshots</name>
-            <url>http://${env.NEXUS_IP}:8081/repository/${env.NEXUS_REPO_PREFIX}-snapshots/</url>
+            <url>http://52.228.32.176:8081/repository/${env.NEXUS_REPO_PREFIX}-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
