@@ -6,7 +6,7 @@
 
     <groupId>hello</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>hello</name>
 
@@ -15,6 +15,37 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
     </parent>
+
+    <activeProfiles>
+    <activeProfile>github</activeProfile>
+  </activeProfiles>
+
+  <profiles>
+    <profile>
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>https://repo1.maven.org/maven2</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>false</enabled></snapshots>
+        </repository>
+        <repository>
+          <id>github</id>
+          <name>GitHub OWNER Apache Maven Packages</name>
+          <url>${ env.MAVEN_URL }</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
+  <servers>
+    <server>
+      <id>github</id>
+      <username>${env.USERNAME }</username>
+      <password>${env.PASSWORD}</password>
+    </server>
+  </servers>
     <repositories>
     <repository>
       <id>central</id>
@@ -26,8 +57,13 @@
       </snapshots>
     </repository>
   </repositories>
-    <!--distributionManagement>
-        <repository>
+    <distributionManagement>
+       <repository>
+         <id>github</id>
+         <name>GitHub OWNER Apache Maven Packages</name>
+         <url>${ env.MAVEN_URL }</url>
+        </repository>
+        <!--repository>
             <id>nexus-releases</id>
             <name>maven-releases</name>
             <url>http://52.228.32.176:8081/repository/${env.NEXUS_REPO_PREFIX}-releases/</url>
@@ -36,8 +72,8 @@
             <id>nexus-snapshots</id>
             <name>maven-snapshots</name>
             <url>http://52.228.32.176:8081/repository/${env.NEXUS_REPO_PREFIX}-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement-->
+        </snapshotRepository-->
+    </distributionManagement>
 
     <dependencies>
         <dependency>
