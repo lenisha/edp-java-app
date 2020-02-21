@@ -9,7 +9,10 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    env:
+      MAVEN_URL: "https://maven.pkg.github.com/edp20"
+      USERNAME: ${{ github.actor }}
+      PASSWORD: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - uses: actions/checkout@v1
     - name: Set up JDK 1.8
@@ -19,7 +22,7 @@ jobs:
     - name: Build with Maven
       run: mvn package --file pom.xml
     - name: Maven Deploy
-      run: mvn deploy -Dregistry=https://maven.pkg.github.com/edp20 -Dtoken=${{ secrets.GITHUB_TOKEN }}
+      run: mvn deploy
 #    - name: Nexus Repo Publish
 #      uses: sonatype-nexus-community/nexus-repo-github-action@master
 #      with:
