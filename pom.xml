@@ -16,36 +16,6 @@
         <version>2.1.1.RELEASE</version>
     </parent>
 
-    <activeProfiles>
-    <activeProfile>github</activeProfile>
-  </activeProfiles>
-
-  <profiles>
-    <profile>
-      <id>github</id>
-      <repositories>
-        <repository>
-          <id>central</id>
-          <url>https://repo1.maven.org/maven2</url>
-          <releases><enabled>true</enabled></releases>
-          <snapshots><enabled>false</enabled></snapshots>
-        </repository>
-        <repository>
-          <id>github</id>
-          <name>GitHub OWNER Apache Maven Packages</name>
-          <url>${ env.MAVEN_URL }</url>
-        </repository>
-      </repositories>
-    </profile>
-  </profiles>
-
-  <servers>
-    <server>
-      <id>github</id>
-      <username>${env.USERNAME }</username>
-      <password>${env.PASSWORD}</password>
-    </server>
-  </servers>
     <repositories>
     <repository>
       <id>central</id>
