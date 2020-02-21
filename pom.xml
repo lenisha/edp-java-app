@@ -6,7 +6,7 @@
 
     <groupId>hello</groupId>
     <artifactId>gs-spring-boot</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
     <packaging>war</packaging>
     <name>hello</name>
 
@@ -26,7 +26,7 @@
       </snapshots>
     </repository>
   </repositories>
-    <distributionManagement>
+    <!--distributionManagement>
         <repository>
             <id>nexus-releases</id>
             <name>maven-releases</name>
@@ -37,7 +37,7 @@
             <name>maven-snapshots</name>
             <url>http://52.228.32.176:8081/repository/${env.NEXUS_REPO_PREFIX}-snapshots/</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement-->
 
     <dependencies>
         <dependency>
