@@ -31,7 +31,7 @@
        <repository>
          <id>github</id>
          <name>GitHub OWNER Apache Maven Packages</name>
-         <url>${ env.MAVEN_URL }</url>
+         <url>https://maven.pkg.github.com/edp20</url>
         </repository>
         <!--repository>
             <id>nexus-releases</id>
