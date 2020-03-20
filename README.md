@@ -1,1 +1,1 @@
-![Java with Nexus Repository](https://github.com/edp20/java-webapp/workflows/Java%20with%20Nexus%20Repository/badge.svg)
+![Java CI with Maven](https://github.com/lenisha/edp-java-app/workflows/Java%20CI%20with%20Maven/badge.svg)
