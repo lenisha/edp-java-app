@@ -31,7 +31,7 @@
         <repository>
         <id>github</id>
         <name>GitHub Packages</name>
-        <url>https://maven.pkg.github.com/lenisha/</url>
+        <url>https://maven.pkg.github.com/lenisha/edp-java-app</url>
         </repository>
     </distributionManagement>
 
